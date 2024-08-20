@@ -4,9 +4,7 @@ import RowSection from "./Sections/RowSection";
 import ServicesSection from "./Sections/ServicesSection";
 import ProcessSection from "./Sections/ProcessSection";
 export default function Layout({ sections }) {
-  console.log(sections);
   const sectionsJSX = sections.map((section, index) => {
-    console.log(section);
     if (section.acf_fc_layout === "zigzag_cards") {
       return (
         <ZigZagCardsSection

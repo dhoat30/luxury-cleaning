@@ -46,7 +46,6 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
             setErrors({ ...errors, [id]: true });
         }
     };
-    console.log(formData)
 
     // submit handler 
     const submitHandler = (e) => {

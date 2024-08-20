@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function USP({ data, showTitle = false }) {
   const { section_title, description, cards } = data;
-  console.log(data);
   return (
     <Section>
       {showTitle && (

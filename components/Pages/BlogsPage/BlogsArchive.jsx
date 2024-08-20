@@ -5,7 +5,6 @@ import React from "react";
 import CardsTemplate from "@/components/UI/HtmlPageTemplate/CardsTemplate";
 export default function BlogsArchive({ data, blogsData }) {
   if (!data || !blogsData) {
-    console.log("no page data");
     return null;
   }
   const heroData = {

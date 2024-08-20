@@ -10,7 +10,6 @@ import TechLogos from "../UI/TechLogos/TechLogos";
 import FooterCta from "../UI/CTA/FooterCta";
 import Layout from "../UI/Layout/Layout";
 export default function HomePage({ data, techLogos }) {
-  console.log(data[0].acf.sections);
   if (!data.length) return null;
 
   const sections = data[0].acf?.sections;

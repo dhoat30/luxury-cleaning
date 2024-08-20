@@ -13,7 +13,6 @@ export default function RowSection({
   image,
   ctaGroup,
 }) {
-  console.log(ctaGroup);
   const imgPadding = (image.height / image.width) * 100;
   const contentAlignment = imageAlignment === "left" ? "2 / 3" : "1 / 2";
   return (
