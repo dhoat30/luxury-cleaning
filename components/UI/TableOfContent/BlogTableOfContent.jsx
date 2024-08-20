@@ -7,7 +7,6 @@ import { lightTheme } from "@/utlis/themeSettings";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
 export default function BlogTableOfContent({ data }) {
-  console.log(data);
   return (
     <ThemeProvider theme={lightTheme}>
       <Section variant="outlined">

@@ -13,14 +13,14 @@ const nextConfig = {
     },
     images: {
         remotePatterns: [{
-            protocol: 'http',
+            protocol: 'https',
             hostname: 'cms.luxurycleaning.nz',
             port: '',
             pathname: '/**'
         }],
     },
     env: {
-        url: "http://cms.luxurycleaning.nz",
+        url: "https://cms.luxurycleaning.nz",
         siteUrl: "https://luxurycleaning.nz",
         name: "Luxury Cleaning - Tauranga",
         darkLogo: "/dark-logo.png",
