@@ -5,7 +5,8 @@ import { lightTheme } from "@/utlis/themeSettings";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import dynamic from "next/dynamic";
-
+import Image from "next/image";
+import Link from "next/link";
 const WebsiteInquiryLongForm = dynamic(() =>
   import("@/components/UI/Forms/WebsiteInquiryLongForm")
 );
@@ -26,6 +27,16 @@ export default function GetQuotePage2({ title, description }) {
             >
               {description}
             </Typography>
+            <Link href="/money-back-guarantee">
+              <Image
+                className="image"
+                src="/money-back.png"
+                alt="Get a Quote"
+                width="256"
+                height="246"
+                quality={100}
+              />
+            </Link>
           </div>
           <Paper className="form-wrapper" variant="outlined">
             <WebsiteInquiryLongForm />
@@ -57,6 +68,9 @@ const ContainerStyled = styled(Container)`
     @media (min-width: 900px) {
       position: sticky;
       top: 80px;
+    }
+    .image {
+      margin-top: 16px;
     }
   }
   .form-wrapper {

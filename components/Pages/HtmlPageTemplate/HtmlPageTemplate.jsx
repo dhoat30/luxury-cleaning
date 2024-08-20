@@ -7,7 +7,10 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 export default function HtmlPageTemplate({ pageData }) {
   return (
-    <Paper elevation={1}>
+    <Paper
+      elevation={1}
+      sx={{ background: "var(--light-surface-container-low)" }}
+    >
       <ContainerStyled maxWidth="xl">
         <Box className="title">
           <Typography variant="h2" component="h1">

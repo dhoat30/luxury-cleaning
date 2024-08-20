@@ -145,7 +145,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
                     setError(false)
                     // set initial state to empty string 
                     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-                    router.push('/website-enquiry/thank-you')
+                    router.push('/form/thank-you')
                 }
                 else {
                     console.log(response)

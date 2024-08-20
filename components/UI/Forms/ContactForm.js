@@ -7,6 +7,7 @@ import LoadingBtn from "../Buttons/LoadingBtn";
 import Box from '@mui/material/Box';
 import axios from "axios";
 import styled from "@emotion/styled";
+import { useRouter } from 'next/navigation'
 
 
 import dynamic from "next/dynamic";
@@ -16,6 +17,8 @@ import { FormatColorResetTwoTone } from "@mui/icons-material";
 const Alert = dynamic(() => import("@mui/material/Alert"));
 
 export default function ContactForm({ className, formName = "Contact Form" }) {
+    const router = useRouter()
+
     const [formData, setFormData] = useState({ typeOfService: [], formName: "Contact Form" });
     const [errors, setErrors] = useState({});
     const [activeStep, setActiveStep] = React.useState(0);
@@ -129,6 +132,7 @@ export default function ContactForm({ className, formName = "Contact Form" }) {
                     // set initial state to empty string 
                     setActiveStep((prevActiveStep) => prevActiveStep + 1);
                     setError(false)
+                    router.push('/form/thank-you')
 
                 }
                 else {

@@ -25,6 +25,7 @@ export default async function Page() {
     const data = await getPageData("website-enquiry")
     return (
         <>
+            <Header showBackgroundColor={1} />
             <main>
                 <ThankYou />
             </main>
