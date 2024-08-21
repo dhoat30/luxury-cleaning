@@ -179,7 +179,7 @@ export default function MobileNavbar() {
             "& .MuiDrawer-paper": {
               width: drawerWidth,
               boxSizing: "border-box",
-              backgroundColor: "var(--dark-service-container-high)",
+              backgroundColor: "var(--dark-surface-container-high)",
             },
           }}
           anchor="left"
