@@ -40,6 +40,7 @@ const ContainerStyled = styled(Container)`
   gap: 80px;
   padding-top: 120px;
   padding-bottom: 40px;
+  background: var(--light-surface-container-low);
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -53,9 +54,10 @@ const ContainerStyled = styled(Container)`
     font-weight: 350;
   }
   .contact-form-wrapper {
+    background: var(--light-surface-container-lowest);
     padding: 0 16px;
     border-radius: 16px;
-    background: var(--black);
-    min-height: 563px;
+
+    min-height: 360px;
   }
 `;

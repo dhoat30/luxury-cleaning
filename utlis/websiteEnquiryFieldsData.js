@@ -101,10 +101,10 @@ export const websiteEnquiryFieldsData = [
 
     {
         id: 'budget2',
-        label: 'What is your estimated budget for this project?',
+        label: 'What is your estimated budget?',
         type: 'radio', // or 'radio' for single selection
         options: [
-            { value: "$300 - $699", label: "$300 - $699" },
+            { value: "$199 - $699", label: "$199 - $699" },
             { value: "$700 - $1,999", label: "$700 - $1,999" },
             { value: "$2,000 - $4,000", label: "$2,000 - $4,000" },
         ],

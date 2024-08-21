@@ -68,9 +68,9 @@ export default function ContactForm({ className, formName = "Contact Form" }) {
         const data = {
             email: formData.email,
             formName: formName,
-            message: `First Name: ${formData.firstname} \n Email: ${formData.email} \n Type of Service: ${formData['services_needed']} \n Budget: ${formData.budget} \n Message: ${formData.message}`,
-            portalID: "22260883",
-            hubspotFormID: "9cbffee8-9708-40f8-b4fd-e4b2271f0f77",
+            message: `First Name: ${formData.firstname} \n Email: ${formData.email} \n Message: ${formData.message}`,
+            portalID: "47120588",
+            hubspotFormID: "0001acb8-19da-498b-bc8d-e4f7a7d88a07",
             hubspotFormObject: [
                 {
                     name: "firstname",
@@ -79,14 +79,8 @@ export default function ContactForm({ className, formName = "Contact Form" }) {
                 {
                     name: "email",
                     value: formData.email
-                }, {
-                    name: "services_needed",
-                    value: formData['services_needed'].join(",")
                 },
-                {
-                    name: "budget",
-                    value: formData.budget
-                },
+
                 {
                     name: "message",
                     value: formData.message
@@ -176,7 +170,7 @@ export default function ContactForm({ className, formName = "Contact Form" }) {
         />
     })
     return (
-        <Container className={`${className} py-8 `}>
+        <Container className={`${className} `}>
             <Box sx={{ width: '100%' }}>
                 <div className="input-wrapper p-6">
 
@@ -203,15 +197,13 @@ const Container = styled.form`
 }
 
 .input-wrapper{ 
-    background: var(--material-theme--sys--dark--surface-container);
 border-radius: 12px; 
-    max-width: 500px; 
-    margin: 40px auto 0 auto; 
+   
+    margin: 0 auto 0 auto; 
     @media(max-width: 500px){ 
         margin: 0 auto 0 auto;   
     }
     .Mui-error{ 
-        color: var(--dark-error); 
         font-size: 1rem;
     }
 }
