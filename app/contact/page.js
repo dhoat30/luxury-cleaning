@@ -1,6 +1,7 @@
 import Contact from '@/components/Pages/Contact/Contact'
 import Footer from '@/components/UI/Footer/Footer'
 import Header from '@/components/UI/Header/Header'
+import USP from '@/components/UI/USP/USP'
 import { getPageData, getOptions } from '@/utlis/fetchData'
 
 
@@ -47,10 +48,13 @@ export default async function Page() {
 
     const data = await getPageData("contact")
     const options = await getOptions()
-
+    const uspData = {
+        cards: options.usp
+    }
     return (
         <>
             <Header showBackgroundColor={1} />
+            <USP data={uspData} marginTop={1} />
             <main >
                 <Contact pageData={data[0]} techLogos={options.tech_logos} />
             </main>

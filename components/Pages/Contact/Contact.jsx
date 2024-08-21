@@ -40,7 +40,6 @@ const ContainerStyled = styled(Container)`
   gap: 80px;
   padding-top: 120px;
   padding-bottom: 40px;
-  background: var(--light-surface-container-low);
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 40px;
