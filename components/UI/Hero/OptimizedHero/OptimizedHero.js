@@ -23,7 +23,7 @@ export default async function OptimizedHero({ slug }) {
     return (
         <>
             <section className={`${styles.heroSection}`}>
-                <div className={`${styles.container} max-width-xl`}>
+                <div className={`${styles.container} `}>
                     <HeroContent title={heroData.title} subtitle={heroData.subtitle} description={heroData.description} ctaLabel={heroData.ctaLabel} ctaLink={heroData.ctaLink} />
                     <Suspense fallback={<Skeleton
                         variant="dark"

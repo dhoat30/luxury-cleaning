@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${work_sans.variable} ${gilda_display.variable}`}>
       <GoogleTagManager gtmId="GTM-WM36CTVJ" />
+
       <body >
         <ThemeProvider theme={lightTheme}>
           {children}

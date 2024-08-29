@@ -81,8 +81,6 @@ const Section = styled.section`
         margin: 8px 0 0 0;
       }
       .image {
-        background: linear-gradient(36deg, #6400ed 0%, #f000ff 100%);
-        border-radius: 50%;
       }
     }
   }
