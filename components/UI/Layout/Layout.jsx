@@ -3,6 +3,8 @@ import ZigZagCardsSection from "./Sections/ZigZagCardsSection";
 import RowSection from "./Sections/RowSection";
 import ServicesSection from "./Sections/ServicesSection";
 import ProcessSection from "./Sections/ProcessSection";
+import Video from "../Video/Video";
+import VideoSection from "./Sections/VideoSection";
 export default function Layout({ sections }) {
   const sectionsJSX = sections.map((section, index) => {
     if (section.acf_fc_layout === "zigzag_cards") {
@@ -46,6 +48,15 @@ export default function Layout({ sections }) {
           title={section.title}
           description={section.description}
           cards={section.cards}
+        />
+      );
+    }
+    if (section.acf_fc_layout === "video_section") {
+      return (
+        <VideoSection
+          key={index}
+          videoID={section.video_id}
+          placeholderImage={section.placeholder_image}
         />
       );
     }
