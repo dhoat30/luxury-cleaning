@@ -72,7 +72,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
         const dataPayload = {
             email: formData.email,
             formName: formName,
-            message: `First Name: ${formData.firstname} \n Email: ${formData.email} \n Type of property?: ${formData['type_of_property']} \n Number of rooms: ${formData['number_of_rooms']} \n Preferred Cleaning Frequency: ${formData['service_frequency']} \n Specific Areas to Focus On: ${formData['focus_areas']} \n Budget: ${formData['budget2']} \n Message: ${formData['message']} `,
+            message: `First Name: ${formData.firstname} \n Email: ${formData.email} \n Type of property?: ${formData['type_of_property']} \n Number of rooms: ${formData['number_of_rooms']} \n Preferred Cleaning Frequency: ${formData['service_frequency']} \n Specific Areas to Focus On: ${formData['focus_areas']}  \n Message: ${formData['message']} `,
             portalID: "47120588",
             hubspotFormID: "53928c0c-9a8f-4b57-8b19-91f0ecffd8ae",
             hubspotFormObject: [
@@ -101,7 +101,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
                 },
                 {
                     name: "budget2",
-                    value: formData.budget2
+                    value: null
                 },
                 {
                     name: "message",

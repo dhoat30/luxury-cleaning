@@ -99,23 +99,7 @@ export const websiteEnquiryFieldsData = [
     },
 
 
-    {
-        id: 'budget2',
-        label: 'What is your estimated budget?',
-        type: 'radio', // or 'radio' for single selection
-        options: [
-            { value: "$199 - $699", label: "$199 - $699" },
-            { value: "$700 - $1,999", label: "$700 - $1,999" },
-            { value: "$2,000 - $4,000", label: "$2,000 - $4,000" },
-        ],
-        validation: value => {
-            if (typeof value === 'string') {
-                return value.trim().length > 2;
-            }
-            return false;
-        },
-        errorMessage: 'Please select at least one'
-    },
+    
     {
         id: 'message', label: 'Message', type: 'textarea', required: false,
     },
