@@ -31,7 +31,7 @@ export default function ContactInfo() {
           target="_blank"
         >
           <Typography variant="body1" component="span">
-            <span>558D Papamoa Beach Road</span> <br />
+            <span>4 Evelyn Place</span> <br />
             <span>Papamoa, Tauranga 3118</span>
           </Typography>
         </Link>
