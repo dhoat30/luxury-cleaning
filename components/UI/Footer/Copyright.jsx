@@ -9,7 +9,7 @@ export default function Copyright() {
   return (
     <CopyRight className="row">
       <Typography variant="body2" component="p">
-        <span> Luxury Cleaning © 2024. All right reserved | Built By</span>
+        <span> Luxury Housekeeping Limited © 2024. All right reserved | Built By</span>
         <a href="https://luxurycleaning.nz" target="_blank" rel="nofollow">
           &nbsp;Web<strong>DUEL</strong>
         </a>
