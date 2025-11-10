@@ -13,6 +13,7 @@ export default function Copyright() {
         <a href="https://luxurycleaning.nz" target="_blank" rel="nofollow">
           &nbsp;Web<strong>DUEL</strong>
         </a>
+        
       </Typography>
     </CopyRight>
   );
