@@ -22,14 +22,24 @@ import dynamic from "next/dynamic";
 export default function WebsiteInquiryLongForm({ className, formName = "Website Enquiry Form" }) {
     const router = useRouter()
 
-    const [formData, setFormData] = useState({ typeOfService: [], formName: "Contact Form" });
+    const [formData, setFormData] = useState({
+        firstname: '',   // Default empty string to make it controlled
+        email: '',
+    
+   
+        type_of_property: '',
+        number_of_rooms:'',
+          service_frequency:'',
+           focus_areas: [],
+        message: ''
+    });
     const [errors, setErrors] = useState({});
     const [activeStep, setActiveStep] = React.useState(0);
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
     const [error, setError] = useState(false)
     const [newSubmission, setNewSubmission] = useState(false)
-
+console.log(formData)
     const handleChange = (id, value, isSelectMultiple) => {
         let updatedValue = value;
 
@@ -69,6 +79,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
         if (!allFieldsValid) {
             return; // Stop the function if any field is invalid or empty
         }
+
         const dataPayload = {
             email: formData.email,
             formName: formName,
@@ -85,24 +96,21 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
                     value: formData.email
                 }, {
                     name: "type_of_property",
-                    value: formData.type_of_property
+                    value: formData['type_of_property']
                 },
                 {
                     name: "number_of_rooms",
-                    value: formData.number_of_rooms
+                    value: formData['number_of_rooms']
                 },
                 {
                     name: "service_frequency",
-                    value: formData.service_frequency
+                    value: formData['service_frequency']
                 },
                 {
                     name: "focus_areas",
-                    value: formData['focus_areas'].join()
+                    value: formData['focus_areas'].join(", ")
                 },
-                {
-                    name: "budget2",
-                    value: null
-                },
+             
                 {
                     name: "message",
                     value: formData.message
@@ -110,6 +118,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
 
             ]
         }
+        console.log(dataPayload)
         setIsLoading(true)
 
         // Send an event to GA4 manually
@@ -139,6 +148,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
         Promise.all([axios(configHubspot), axios(configSendMail)])
             .then(function (response) {
                 if (response[1].status === 200) {
+                    console.log("testing form",response )
                     setIsLoading(false)
                     setIsSuccess(true)
                     setNewSubmission(false)

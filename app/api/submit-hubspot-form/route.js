@@ -40,7 +40,6 @@ export async function POST(req, res) {
         // submit form
         let response = await fetch(`https://api.hsforms.com/submissions/v3/integration/secure/submit/${portalID}/${hubspotFormID}`, postOptions)
         response = await response.json();
-        console.log(response)
 
         return NextResponse.json({ message: "This Worked", success: true, data: response });
     } catch (error) {

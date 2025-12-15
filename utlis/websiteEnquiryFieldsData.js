@@ -12,9 +12,11 @@ export const websiteEnquiryFieldsData = [
         id: 'email', label: 'Email address', type: 'email', required: true, autoComplete: "email", validation: value => /\S+@\S+\.\S+/.test(value),
         errorMessage: 'Enter a valid email address'
     },
+    
     {
         id: 'type_of_property',
         label: 'Type of property',
+          required: false, 
         type: 'select', // or 'radio' for single selection
         options: [
             { value: 'Apartment', label: 'Apartment' },
@@ -34,9 +36,9 @@ export const websiteEnquiryFieldsData = [
     {
         id: 'number_of_rooms',
         label: 'Number of rooms',
+          required: false, 
         type: 'select', // or 'radio' for single selection
         options: [
-            { value: 'Studio', label: 'Studio' },
             { value: '1 Bedroom', label: '1 Bedroom' },
             { value: '3 Bedrooms', label: '3 Bedrooms' },
             { value: '4+ Bedrooms', label: '4+ Bedrooms' },
@@ -54,6 +56,7 @@ export const websiteEnquiryFieldsData = [
     {
         id: 'service_frequency',
         label: 'Preferred Cleaning Frequency',
+          required: false, 
         type: 'select', // or 'radio' for single selection
         options: [
             { value: "Spring Cleaing (One-Off)", label: "Spring Cleaing (One-Off)" },
@@ -79,6 +82,7 @@ export const websiteEnquiryFieldsData = [
         label: 'Specific Areas to Focus On',
         type: 'select', // or 'radio' for single selection
         multiple: true,
+        required: false, 
         options: [
             { value: "Kitchen", label: "Kitchen" },
             { value: "Bathrooms", label: "Bathrooms" },
