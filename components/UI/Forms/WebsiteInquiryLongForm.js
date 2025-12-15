@@ -196,7 +196,7 @@ export default function WebsiteInquiryLongForm({ className, formName = "Website 
                 <React.Fragment>
                     <div className="input-wrapper p-6">
                         {formInputs}
-                        <LoadingBtn newSubmission={newSubmission} onClick={submitHandler} isLoading={isLoading} isSuccess={isSuccess} >Submit now</LoadingBtn>
+                        <LoadingBtn newSubmission={newSubmission} onClick={submitHandler} isLoading={isLoading} isSuccess={isSuccess} >Get a Fixed Price Quote</LoadingBtn>
 
                         {error && <Alert sx={{ margin: "8px 0" }} severity='error'>Something went wrong. Please Try again</Alert>}
                     </div>

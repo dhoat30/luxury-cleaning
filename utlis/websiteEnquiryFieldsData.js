@@ -56,7 +56,7 @@ export const websiteEnquiryFieldsData = [
         label: 'Preferred Cleaning Frequency',
         type: 'select', // or 'radio' for single selection
         options: [
-            { value: "One-Time", label: "One-Time" },
+            { value: "Spring Cleaing (One-Off)", label: "Spring Cleaing (One-Off)" },
             { value: "Daily", label: "Daily" },
             { value: "Weekly", label: "Weekly" },
             { value: "Fortnightly", label: "Fortnightly" },
